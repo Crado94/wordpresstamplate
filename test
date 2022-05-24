@@ -35,7 +35,7 @@ Resources:
             cp wordpress/wp-config-sample.php wordpress/wp-config.php
             sed -i -e "s/localhost/${wordpressRDS.Endpoint.Address}/g" wordpress/wp-config.php
             sed -i -e "s/database_name_here/wordpressRDS/g" wordpress/wp-config.php
-            sed -i -e "s/password_here/Rgn8823!!/g" wordpress/wp-config.php
+            sed -i -e "s/password_here/Password/g" wordpress/wp-config.php
             sed -i -e "s/username_here/admin/g" wordpress/wp-config.php
             cp -r wordpress/* /var/www/html
             curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
